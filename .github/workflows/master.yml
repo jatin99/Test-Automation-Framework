@@ -28,3 +28,20 @@ jobs:
 
       - name: Run tests
         run: mvn test -X -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false
+
+      - name: Archive Logs
+        if: always()  # This ensures logs are saved even if the tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: automation-logs
+          path: logs/
+
+      - name: Archive Extent Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: extent-reports
+          path: reports/
+
+      - name: Notify test success or failure
+        run: echo "Tests completed."
