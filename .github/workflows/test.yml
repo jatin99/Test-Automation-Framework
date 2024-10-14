@@ -26,7 +26,7 @@ jobs:
 
         
     - name: Running Test with maven
-      run: mvn test -X -Dbrowser = chrome -DisLambdaTest = true -DisHeadless = false
+      run: mvn test -X -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false
     
     - name: Upload logs Artifact
       uses: actions/upload-artifact@v4.4.3
