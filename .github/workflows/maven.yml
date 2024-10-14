@@ -35,13 +35,13 @@ jobs:
        path: logs/
 
     - name: Upload Screenshots as Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4.4.3
       with:
         name: screenshots
         path: Test-Automation-Framework/screenshots/
 
     - name: Upload HTML Report as Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4.4.3
       with:
         name: html-report
         path: Test-Automation-Framework/extent-reports/
