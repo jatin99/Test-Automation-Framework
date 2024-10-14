@@ -11,18 +11,7 @@
 
 
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version> <!-- Make sure you are using a modern
-				version of the plugin -->
-				<configuration>
-					<source>1.8</source> <!-- Update this to a supported version
-					like 1.8 or 11 -->
-					<target>1.8</target> <!-- Update this to a supported version
-					like 1.8 or 11 -->
-				</configuration>
-			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
