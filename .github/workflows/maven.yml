@@ -50,6 +50,17 @@ jobs:
        
     - name: Test Execution Status
       run: echo "Test Execution Completed"
+
+    - name: Copy Report to gh-pages Folder
+      run: |
+        mkdir -p public/extent-reports
+        cp -R Test-Automation-Framework/report.html  public/extent-reports/
+        cp -R Test-Automation-Framework/screenshots/ public/extent-reports/screenshots/
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: public/extent-reports/
        
 
 
