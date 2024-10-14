@@ -39,14 +39,14 @@ jobs:
       uses: actions/upload-artifact@v4.4.3
       with:
         name: screenshots
-        path: Test-Automation-Framework/screenshots/
+        path: screenshots/
 
     - name: Upload HTML Report as Artifact
       if: always()
       uses: actions/upload-artifact@v4.4.3
       with:
         name: html-report
-        path: Test-Automation-Framework/report.html
+        path: report.html
        
     - name: Test Execution Status
       run: echo "Test Execution Completed"
@@ -55,7 +55,7 @@ jobs:
       run: |
         mkdir -p public/extent-reports
         cp -R report.html  public/extent-reports/
-        cp -R /screenshots/ public/extent-reports/screenshots/
+        cp -R screenshots/ public/extent-reports/screenshots/
 
     - name: Deploy 🚀
       if: always()
