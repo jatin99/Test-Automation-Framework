@@ -58,6 +58,7 @@ jobs:
         cp -R Test-Automation-Framework/screenshots/ public/extent-reports/screenshots/
 
     - name: Deploy 🚀
+      if: always()
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: public/extent-reports/
