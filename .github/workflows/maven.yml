@@ -34,12 +34,17 @@ jobs:
        name: Test logs
        path: logs/
 
-    - name: Upload  Test Reports
-      if: always()
-      uses: actions/upload-artifact@v4.4.3
+    - name: Upload Screenshots as Artifacts
+      uses: actions/upload-artifact@v2
       with:
-       name: Test Reports
-       path: report.html
+        name: screenshots
+        path: Test-Automation-Framework/screenshots/
+
+    - name: Upload HTML Report as Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: html-report
+        path: Test-Automation-Framework/extent-reports/
        
     - name: Test Execution Status
       run: echo "Test Execution Completed"
