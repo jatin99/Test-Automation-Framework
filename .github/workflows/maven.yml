@@ -54,8 +54,8 @@ jobs:
     - name: Copy Report to gh-pages Folder
       run: |
         mkdir -p public/extent-reports
-        cp -R Test-Automation-Framework/report.html  public/extent-reports/
-        cp -R Test-Automation-Framework/screenshots/ public/extent-reports/screenshots/
+        cp -R report.html  public/extent-reports/
+        cp -R /screenshots/ public/extent-reports/screenshots/
 
     - name: Deploy 🚀
       if: always()
