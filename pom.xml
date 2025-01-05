@@ -7,6 +7,27 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Automation-Assignment</name>
 	<description>Test Automation Framework for automationpractice.pl</description>
+	<profiles>
+		<profile>
+			<id>rerun-failed</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.2.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>
+									target/surefire-reports/testng-failed.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 	<build>
 
 
